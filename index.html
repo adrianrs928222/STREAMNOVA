@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>StreamNova | Servicio digital premium HD & 4K</title>
+<meta name="description" content="StreamNova ofrece servicio digital premium en España. Calidad HD & 4K, activación rápida y soporte directo por WhatsApp.">
+<meta name="robots" content="index,follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="StreamNova | Servicio digital premium HD & 4K">
+<meta property="og:description" content="Servicio premium con calidad HD & 4K y soporte directo.">
+<meta property="og:type" content="website">
+
+<style>
+:root{
+  --bg:#05070b;
+  --card:rgba(15,18,25,.78);
+  --line:rgba(255,255,255,.12);
+  --text:#f5f7fa;
+  --muted:rgba(245,247,250,.7);
+  --accent:#5eead4;
+  --accent2:#38bdf8;
+  --wa:#25D366;
+  --radius:20px;
+  --shadow:0 18px 45px rgba(0,0,0,.65);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--text);
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.78), rgba(0,0,0,.9)),
+    radial-gradient(800px 500px at 15% 0%, rgba(56,189,248,.25), transparent 60%),
+    radial-gradient(800px 500px at 85% 10%, rgba(94,234,212,.25), transparent 60%),
+    url("./assets/img/bg.png");
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
+
+.container{
+  max-width:1000px;
+  margin:0 auto;
+  padding:22px;
+}
+
+/* Header */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:18px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:900;
+  letter-spacing:.6px;
+}
+.dot{
+  width:12px;height:12px;border-radius:50%;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  box-shadow:0 0 0 6px rgba(94,234,212,.2);
+}
+.tag{
+  border:1px solid var(--line);
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.05);
+  color:var(--muted);
+  font-weight:800;
+  font-size:.95rem;
+}
+
+/* Hero */
+.hero{
+  border:1px solid var(--line);
+  background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+/* Video */
+.videoBox{
+  width:100%;
+  background:#000;
+  border-bottom:1px solid var(--line);
+}
+.heroVideo{
+  width:100%;
+  height:auto;
+  display:block;
+  background:#000;
+}
+
+/* Hero content */
+.heroContent{
+  padding:20px;
+  text-align:center;
+}
+h1{
+  margin:10px 0;
+  font-size:clamp(32px,3.5vw,48px);
+  line-height:1.1;
+}
+.heroContent p{
+  margin:8px 0;
+  color:var(--muted);
+  font-size:1.08rem;
+}
+
+/* Badges */
+.badges{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:16px 0;
+}
+.badge{
+  padding:10px 16px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.05);
+  font-weight:900;
+}
+.badgePrice{
+  border-color:rgba(94,234,212,.45);
+  background:rgba(94,234,212,.15);
+  color:var(--accent);
+}
+
+/* Grid */
+.grid{
+  display:grid;
+  gap:14px;
+  grid-template-columns:1fr;
+  padding:18px;
+}
+@media(min-width:900px){
+  .grid{grid-template-columns:1.1fr .9fr}
+}
+.card{
+  border:1px solid var(--line);
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:16px;
+  text-align:left;
+}
+.card h2{margin:0 0 10px;font-size:1.15rem}
+.card p{color:var(--muted)}
+ul{padding-left:18px;margin:0}
+li{margin:8px 0}
+
+/* CTA */
+.cta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:12px;
+}
+.btn{
+  width:100%;
+  text-align:center;
+  text-decoration:none;
+  font-weight:900;
+  padding:12px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.05);
+  color:var(--text);
+}
+.btnWA{
+  border-color:rgba(37,211,102,.45);
+  background:rgba(37,211,102,.18);
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  margin:18px 0;
+  color:rgba(255,255,255,.55);
+  font-size:.95rem;
+}
+footer a{
+  color:rgba(255,255,255,.8);
+  text-decoration:none;
+  font-weight:800;
+}
+
+/* Legal */
+.section{
+  margin-top:24px;
+  border-top:1px solid var(--line);
+  background:rgba(0,0,0,.25);
+}
+.section .inner{
+  max-width:960px;
+  margin:0 auto;
+  padding:24px 18px;
+}
+.legalBox{
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:rgba(255,255,255,.05);
+  padding:16px;
+  margin-top:12px;
+}
+.legalBox p{color:var(--muted);font-size:.97rem}
+
+/* WhatsApp floating */
+.whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:64px;height:64px;
+  border-radius:50%;
+  background:rgba(37,211,102,.28);
+  display:grid;
+  place-items:center;
+  box-shadow:0 16px 36px rgba(0,0,0,.6);
+  border:1px solid rgba(255,255,255,.15);
+  z-index:9999;
+}
+.whatsapp svg{width:34px;height:34px;fill:#fff}
+.sr{position:absolute;left:-9999px}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"WebSite",
+ "name":"StreamNova",
+ "inLanguage":"es",
+ "description":"Servicio digital premium en España con calidad HD & 4K y soporte directo por WhatsApp."
+}
+</script>
+</head>
+
+<body>
+
+<div class="container">
+
+<header class="header">
+  <div class="brand"><span class="dot"></span>StreamNova</div>
+  <div class="tag">Activación rápida · Soporte directo</div>
+</header>
+
+<section class="hero">
+
+  <!-- VIDEO -->
+  <div class="videoBox">
+    <video class="heroVideo"
+           controls
+           playsinline
+           preload="none"
+           poster="./assets/img/poster.png">
+      <source src="https://dl.dropboxusercontent.com/scl/fi/4gu20xvky6q4rtzmzj6d9/streamdomus_video.mp4?rlkey=edqd1uy19tpkbptlluvgayyfw"
+              type="video/mp4">
+      Tu navegador no soporta video HTML5.
+    </video>
+  </div>
+
+  <div class="heroContent">
+    <h1>Servicio digital premium en España</h1>
+    <p>Contenido y experiencia en <strong>HD & 4K</strong>. Servicio premium con estabilidad diaria y soporte real.</p>
+
+    <div class="badges">
+      <div class="badge badgePrice">Servicio premium</div>
+      <div class="badge">StreamNova</div>
+    </div>
+
+    <p style="margin-top:10px"><strong>Contratación directa</strong> por WhatsApp. Atención rápida.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Qué incluye</h2>
+      <ul>
+        <li>✔ Acceso premium HD & 4K</li>
+        <li>✔ Activación guiada paso a paso</li>
+        <li>✔ Compatible con Smart TV, móvil y PC</li>
+        <li>✔ Servicio estable y optimizado</li>
+        <li>✔ Soporte directo personalizado</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Cómo contratar</h2>
+      <p>Escríbenos por WhatsApp y te explicamos los pasos de activación.</p>
+
+      <div class="cta">
+        <a class="btn btnWA"
+           href="https://wa.me/34667221621?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20StreamNova."
+           target="_blank" rel="noopener">
+           Contactar por WhatsApp
+        </a>
+      </div>
+
+      <p style="margin-top:12px;font-size:.95rem;color:rgba(255,255,255,.55)">
+        WhatsApp oficial: <strong>+34 667 22 16 21</strong>
+      </p>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  © <span id="y"></span> StreamNova ·
+  <a href="#aviso-legal">Aviso legal</a> ·
+  <a href="#politica-privacidad">Política de privacidad</a>
+</footer>
+
+</div>
+
+<section id="legal" class="section">
+  <div class="inner">
+    <div id="aviso-legal" class="legalBox">
+      <h3>Aviso legal</h3>
+      <p>Este sitio web ofrece información sobre un servicio digital privado.</p>
+      <p>La contratación se realiza mediante plataformas externas como WhatsApp.</p>
+    </div>
+
+    <div id="politica-privacidad" class="legalBox">
+      <h3>Política de privacidad</h3>
+      <p>No se recogen datos personales mediante formularios propios.</p>
+      <p>El contacto se realiza exclusivamente por WhatsApp.</p>
+      <p>No se utilizan cookies ni herramientas de seguimiento.</p>
+    </div>
+  </div>
+</section>
+
+<a class="whatsapp"
+   href="https://wa.me/34667221621?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20StreamNova."
+   target="_blank" rel="noopener" aria-label="WhatsApp">
+  <span class="sr">WhatsApp</span>
+  <svg viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 8.02.003C3.62.003.06 3.563.06 7.963c0 1.404.366 2.775 1.063 3.992L0 16l4.13-1.084a7.94 7.94 0 0 0 3.89 1.002h.003c4.4 0 7.96-3.56 7.96-7.96a7.9 7.9 0 0 0-2.382-5.632z"/></svg>
+</a>
+
+<script>
+document.getElementById("y").textContent=new Date().getFullYear();
+</script>
+
+</body>
+</html>
